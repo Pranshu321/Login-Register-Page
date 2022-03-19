@@ -1,0 +1,32 @@
+{
+	"version": 3,
+	"sources": [
+		"components/Input.jsx",
+		"components/Register.jsx",
+		"components/App.jsx",
+		"index.js"
+	],
+	"names": [
+		"Input",
+		"props",
+		"type",
+		"placeholder",
+		"holder",
+		"Register",
+		"className",
+		"App",
+		"ReactDOM",
+		"render",
+		"document",
+		"getElementById"
+	],
+	"mappings": "wMAMeA,MAJf,SAAeC,GACd,OAAQ,2BAAOC,KAAMD,EAAMC,KAAMC,YAAaF,EAAMG,UCYtCC,MAZf,WACC,OACC,0BAAMC,UAAU,QACf,+CACA,kBAAC,EAAD,CAAOJ,KAAK,OAAOE,OAAO,aAC1B,kBAAC,EAAD,CAAOF,KAAK,WAAWE,OAAO,aAC9B,kBAAC,EAAD,CAAOF,KAAK,WAAWE,OAAO,qBAC9B,4BAAQF,KAAK,UAAb,cCEYK,MANf,WACC,OACC,yBAAKD,UAAU,aAA0C,kBAAC,EAAD,Q,OCJ3DE,EAASC,OAAO,kBAAC,EAAD,MAASC,SAASC,eAAe,W",
+	"file": "static/js/main.4d769f11.chunk.js",
+	"sourcesContent": [
+		"import React from \"react\";\r\n\r\nfunction Input(props) {\r\n\treturn (<input type={props.type} placeholder={props.holder} />);\r\n}\r\n\r\nexport default Input;\r\n",
+		"import React from \"react\";\r\nimport Input from \"./Input\";\r\n\r\nfunction Register() {\r\n\treturn (\r\n\t\t<form className=\"form\">\r\n\t\t\t<h1>Register Here ,</h1>\r\n\t\t\t<Input type=\"text\" holder=\"Username\" />\r\n\t\t\t<Input type=\"password\" holder=\"Password\" />\r\n\t\t\t<Input type=\"password\" holder=\"Conform Password\" />\r\n\t\t\t<button type=\"submit\">Register</button>\r\n\t\t</form>\r\n\t);\r\n}\r\n\r\nexport default Register;\r\n",
+		"import React from \"react\";\nimport Login from \"./Login\";\nimport Register from \"./Register\";\n\nlet userisRegister = false;\n\nfunction App() {\n\treturn (\n\t\t<div className=\"container\">{userisRegister ? <Login /> : <Register />}</div>\n\t);\n}\n\nexport default App;\n",
+		"import React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport App from \"./components/App\";\n\nReactDOM.render(<App />, document.getElementById(\"root\"));\n"
+	],
+	"sourceRoot": ""
+}
